@@ -1,0 +1,97 @@
+
+/* Responsive styles */
+
+@media (max-width: 768px) {
+
+     /* Adjust styles for screens up to 768px wide (e.g., tablets) */
+
+     .call-to-action {
+        width: 80vw;
+     }
+
+     .specials {
+        width: 80vw;
+     }
+
+     .specials-container {
+        flex-direction: row;
+    }
+
+    .specials-title {
+        flex-direction: column;
+    }
+
+    .special-card {
+        width: 46%;
+    }
+
+    .image img {
+        position: initial;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    /* Adjust styles for smaller screens (e.g., smartphones) */
+
+    nav {
+        display: none;
+    }
+
+    .hero-sec {
+        margin-bottom: 0;
+    }
+
+    .call-to-action {
+        grid-template-columns: 1fr;
+        width: 100vw;
+        padding: 32px;
+    }
+
+    .title {
+        font-size: 48pt;
+    }
+
+    .sub-title {
+        font-size: 36pt;
+    }
+
+    .description {
+        font-size: 16t;
+    }
+
+    .text-content {
+        padding: 0;
+       padding-top: 24px;
+    }
+
+
+    .image {
+        margin: 32px 0;
+    }
+
+    .image img {
+        position: initial;
+        width: 100%;
+    }
+
+    .specials {
+        width: 100vw;
+        padding:32px;
+        padding-top: 8px;
+    }
+
+    .specials-title {
+        flex-direction: column;
+    }
+
+    .specials-container {
+        flex-direction: column;
+    }
+
+    .special-card {
+        width: 100%;
+    }
+
+}
