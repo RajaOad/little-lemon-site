@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const specialsData = [
   {
@@ -27,14 +28,14 @@ const specialsData = [
   },
 ];
 
-function Specials() {
+function Specials({ buttonText, titleText, buttonLink }) {
   return (
-    <div className='main'>
+    <section className='main'>
     <div className="specials">
       <div className="specials-title">
-      <h1 className='sec-title'>This weeks specials!</h1>
+      <h1 className='sec-title'>{titleText}</h1>
       <div className="order-button">
-        <button>Order Online</button>
+      <Link className='btn' to={buttonLink}>{buttonText}</Link>
       </div>
       </div>
       <div className="specials-container">
@@ -45,13 +46,13 @@ function Specials() {
               <h2 className='card-title'>{special.title} <span className='highlight-text'>{special.price}</span></h2>
               <p className="price"></p>
               <p className='card-desc'>{special.description}</p>
-              <a href="#">{special.deliveryLink}</a>
+              <Link to="#">{special.deliveryLink}</Link>
             </div>
           </div>
         ))}
       </div>
     </div>
-    </div>
+    </section>
   );
 }
 

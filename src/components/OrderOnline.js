@@ -1,9 +1,11 @@
-import React from 'react'
+// OrderOnline.js
+import React from 'react';
+import Specials from './Specials';
 
 const OrderOnline = () => {
   return (
-    <div>OrderOnline</div>
-  )
-}
+    <Specials buttonText={'Order Online'} titleText='Order Online Now' buttonLink='/order-online' />
+  );
+};
 
-export default OrderOnline
+export default OrderOnline;

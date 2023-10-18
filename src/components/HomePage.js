@@ -9,7 +9,7 @@ const HomePage = () => {
     <>
     
     <CallToAction />
-    <Specials />
+    <Specials buttonText='Order Online' titleText='This weeks specials!' buttonLink='/order-online' />
     <CustomersSay />
     <About />
 

@@ -32,6 +32,71 @@ nav ul li a {
   text-decoration: none;
   color: black; /* Set the text color for links */
   font-weight: bold; /* Adjust font weight as needed */
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #f4ce14;
+}
+
+/* MobileMenu.css */
+
+.mobile-menu-toggle {
+  display: none;
+}
+
+.basket-icon {
+  display: none;
+}
+
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  height: 100%;
+  width: 70%;
+  background-color: #495E57; /* Background color using the secondary color */
+  z-index: 20;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  transition: left 0.3s ease-in-out;
+}
+
+.mobile-menu.open {
+  left: 0;
+}
+
+.mobile-menu ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.mobile-menu ul li {
+  margin: 24px 0;
+  text-align: center;
+}
+
+.mobile-menu ul li a {
+  text-decoration: none;
+  color: #f4ce14; /* Text color using the primary color */
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.mobile-menu ul li a:hover {
+  text-decoration: underline;
+}
+
+.close-icon {
+  color: #f4ce14; /* Icon color using the primary color */
+  font-size: 24px; /* Adjust the size as needed */
+  cursor: pointer;
+  align-self: flex-end;
+}
+
+.close-icon:hover {
+  color: black; /* Icon color on hover using the secondary color */
 }
 
 /* Add more styles as needed */
@@ -140,6 +205,26 @@ button {
   font-size: 20px;
 }
 
+button:hover {
+  background-color: #d5b60a;
+}
+
+.btn {
+  background-color: #f4ce14;
+  color: black;
+  font-weight: 800;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 12px;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background-color: #d5b60a;
+}
+
 .image {
   display: flex;
   justify-content: flex-end;
@@ -235,6 +320,502 @@ button {
   text-decoration: underline;
 }
 
-.specials button {
+.specials .btn {
   padding: 16px 32px;
 }
+
+.specials .btn:hover {
+  text-decoration: none;
+}
+
+/* BookingForm.css */
+
+.booking-form {
+ width: 32vw;
+  margin: 0 auto;
+  padding: 20px;
+  padding-right: 40px;
+  background-color: #edefee;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-sec {
+  width: 62vw;
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0 64px 0;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  font-size: 16px;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.submit-button {
+  background-color: #f4ce14;
+  color: black;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+  background-color: #d5b60a;
+}
+
+.disabled-button {
+  background-color: #ccc;
+  color: #999;
+  cursor: not-allowed;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  
+}
+
+/* BookingSlot.css */
+
+.booking-slots {
+  margin-top: 40px;
+}
+
+.booking-slot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 10px 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.booking-slot:hover {
+  transform: scale(1.02);
+}
+
+.booking-slot.booked {
+  background-color: #ff7e7e;
+  color: #fff;
+}
+
+.time-label {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.booked-label {
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #e61919;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.book-now-button {
+  background-color: #f4ce14;
+  color: black;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.book-now-button:hover {
+  background-color: #d5b60a;
+}
+
+.error {
+  color: red;
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+/* ConfirmedBooking.css */
+
+.confirm-sec {
+  height: 100vh;
+}
+
+.confirm-sec .container {
+  text-align: center;
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #495E57; /* Border color */
+  border-radius: 5px;
+  background-color: #f4ce14; /* Background color */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.confirm-sec h2 {
+  font-size: 28px;
+  color: #495E57; /* Text color */
+}
+
+.confirm-sec p {
+  font-size: 18px;
+  color: #495E57; /* Text color */
+}
+
+/* Footer container */
+.footer {
+  display: flex;
+  justify-content: center;
+  background-color: #495E57; /* Primary background color */
+}
+
+.footer-content {
+  max-width: 100%;
+  padding: 64px 0;
+  color: #fff; /* White text color */
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 62vw;
+}
+
+/* Logo */
+.footer-content .logo {
+  background: white;
+    padding: 12px;
+    margin-right: 64px;
+    /* border-radius: 8px; */
+}
+.footer-content .logo img {
+  max-width: 12vw;
+  height: auto;
+  display: block;
+}
+
+/* Individual link list */
+.link-list {
+  flex: 1;
+  padding: 20px;
+  background-color: #495E57; /* Primary link list background color */
+  border-radius: 5px;
+  transition: background-color 0.3s, transform 0.2s;
+  margin: 0 10px;
+  color: #f4ce14;
+}
+
+.link-list:hover {
+  background-color: #f4ce14; /* Highlight background color on hover */
+  transform: translateY(-5px); /* Add a slight lift effect */
+  color: #495E57;
+}
+
+.link-list:hover a {
+  color: black;
+}
+
+.link-list h4 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.link-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.link-list ul li {
+  margin-bottom: 10px;
+}
+
+.link-list ul li a {
+  color: #fff; /* White link text color */
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.link-list ul li a:hover {
+  color: #495E57; /* Change text color to primary color on hover */
+  text-decoration: underline;
+
+}
+
+/* OrderOnline.css */
+
+.order-online-container {
+  background-color: #495E57; /* Primary background color */
+  color: #fff; /* White text color */
+  padding: 40px 0;
+  text-align: center;
+ display: flex;
+ justify-content: center;
+ margin: 24px 0;
+}
+
+.order-online-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  width: 62vw;
+}
+
+.order-online-heading {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #f4ce14; /* Primary text color */
+}
+
+.order-online-description {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.order-online-button {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #f4ce14; /* Primary button color */
+  color: black; /* Text color on the button */
+  font-size: 18px;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.order-online-button:hover {
+  background-color:#d5b60a; /* Darken the button on hover */
+}
+
+/* Login.css */
+.login-sec {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('../public/restaurant.jpg'); /* Replace with your image path */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* Fixed background to prevent scrolling effect */
+  padding: 20px; /* Add padding for spacing around the form */
+  min-height: 100vh; /* Ensure the section covers the full viewport height */
+  position: relative; /* Position the overlay */
+}
+
+.login-sec::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)); /* Adjust the opacity (0.5) to control the darkness */
+}
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 62vw;
+
+}
+
+.login-content {
+  width: auto;
+  text-align: center;
+  background-color: #f4ce14; /* Primary background color */
+  padding: 20px;
+  padding-right: 40px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+  /* background-color: rgba(255, 255, 255, 0.8);  */
+  /* border: 2px solid #f4ce14; */
+}
+
+.login-container h2 {
+  font-size: 24px;
+  color: #495E57; /* Primary text color */
+}
+
+.login-container .form-group {
+  margin: 10px 0;
+  text-align: left;
+}
+
+.login-container label {
+  font-size: 16px;
+  color: #495E57; /* Primary text color */
+}
+
+.login-container input {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #495E57;
+  border-radius: 5px;
+}
+
+.login-container button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  margin-top: 10px;
+  font-size: 20px;
+}
+
+.login-container .login-button {
+  background-color: #495E57; /* Button background color */
+  color: #fff; /* Button text color */
+  cursor: pointer;
+}
+
+.login-container .login-button:hover {
+  background-color: #333; /* Darken button color on hover */
+}
+
+.testimonial-sec {
+  display: flex;
+  justify-content: center;
+  background-color: #f4ce14;
+  margin-bottom: 44px;
+}
+
+.customer-say-container {
+  text-align: center;
+  padding: 40px 0;
+  color: #495E57; /* Use the original text color */
+  width: 62vw;
+}
+
+.testimonial-cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.testimonial-card {
+  background-color: #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  margin: 20px;
+  padding: 20px;
+  width: 30%;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.star-icon {
+  color: #f4ce14; /* Star icon color */
+  margin-right: 4px;
+}
+
+.testimonial-image {
+  display: flex;
+  align-items: center;
+}
+
+.customer-say-container .testimonial-image img {
+  /* max-width: 100%; */
+  width: 24%;
+  height: auto;
+  margin-right: 12px;
+}
+
+.customer-say-container .name {
+  font-weight: bold;
+}
+
+.review {
+  margin-top: 10px;
+  line-height: 1.4;
+  text-align: left;
+}
+
+.about-sec {
+  display: flex;
+  justify-content: center;
+}
+
+.about-container {
+  width: 62vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 64px;
+  padding-top: 20px;
+
+  color: #495E57;
+}
+
+.about-container .left-content {
+  flex: 1;
+  padding: 20px;
+  margin-right: 40px;
+}
+
+.about-container h2 {
+ margin-bottom: 0;
+ line-height: 0.5;
+}
+
+.about-container h3 {
+  font-size: 32pt;
+  margin-top: 0;
+}
+
+.about-container p {
+  font-size: 16px;
+  line-height: 1.4;
+  text-align: justify;
+}
+
+.about-container .right-content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-container .aboutimg-container {
+  position: relative;
+  width: 100%;
+}
+
+.about-container .about-image {
+  width: 100%;
+  height: auto;
+  z-index: 50;
+}
+
+.about-container .absolute-image {
+  position: absolute;
+  top: -64px;
+  left: 64px;
+  width: 100%;
+  height: auto;
+}
+

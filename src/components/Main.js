@@ -6,10 +6,15 @@ import Menu from './Menu';
 import BookingPage from './BookingPage';
 import OrderOnline from './OrderOnline';
 import Login from './Login';
+import ConfirmedBooking from './ConfirmedBooking';
+
 
 const Main = () => {
+ 
+ 
+
   return (
-    <main>
+    <>
       <Routes>
         <Route path="/" element={<Homepage />} />
         <Route path="/about" element={<About />} />
@@ -17,8 +22,9 @@ const Main = () => {
         <Route path="/reservations" element={<BookingPage />} />
         <Route path="/order-online" element={<OrderOnline />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/confirmation" element={<ConfirmedBooking />} />
       </Routes>
-    </main>
+    </>
   );
 };
 

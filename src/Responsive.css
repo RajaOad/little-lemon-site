@@ -5,6 +5,26 @@
 
      /* Adjust styles for screens up to 768px wide (e.g., tablets) */
 
+     nav {
+        display: none;
+    }
+
+    header {
+        justify-content: space-between;
+    }
+
+    .mobile-menu-toggle {
+        display: initial;
+      }
+      
+      .basket-icon {
+        display: initial;
+      }
+
+     .mobile-menu {
+        width: 40%;
+     }
+
      .call-to-action {
         width: 80vw;
      }
@@ -29,15 +49,73 @@
         position: initial;
     }
 
+    .form-sec {
+        flex-direction: row;
+        width: 80vw;
+        justify-content: space-between;
+    }
+
+    .order-online-heading {
+        font-size: 28px;
+    }
+
+    .order-online-description {
+          font-size: 16px;
+    }
+
+    .footer-content {
+        padding: 32px 0;
+        justify-content: center;
+        width: 80vw;
+        }
+
+    .footer-content .logo {
+        width: 24%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .footer-content .logo img {
+        width: 100%;
+        height: auto;
+    }
+
+    .login-container {
+        width: 80vw;
+    }
+
+    .login-content {
+        width: initial;
+    }
+
+    .customer-say-container {
+        width: 80vw;
+      }
+
+      .about-container {
+        width: 80vw;
+        padding: 32px 0;
+      }
+
+      .about-container .left-content {
+        padding: 20px 0;
+      }
+
+      .about-container .absolute-image, .about-container .about-image {
+        max-width: 80%;
+      }
+
 }
 
 @media (max-width: 480px) {
 
     /* Adjust styles for smaller screens (e.g., smartphones) */
 
-    nav {
-        display: none;
-    }
+    .mobile-menu {
+        width: 70%;
+     }
 
     .hero-sec {
         margin-bottom: 0;
@@ -93,5 +171,83 @@
     .special-card {
         width: 100%;
     }
+
+    .form-sec {
+        flex-direction: column;
+        width: 100vw;
+        padding: 0 32px;
+    }
+
+    .booking-form {
+        width: initial;
+        margin-bottom: 24px;
+    }
+
+    .login-sec {
+        padding: 0 32px;
+    }
+
+    .footer-content {
+        padding: 32px;
+        justify-content: center;
+        width: initial;
+        }
+
+    .footer-content .logo {
+        width: 100%;
+        margin-right: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .footer-content .logo img {
+        width: 100%;
+        height: auto;
+    }
+
+    .login-container {
+        width: initial;
+    }
+
+    .login-content {
+        width: initial;
+    }
+
+    .customer-say-container {
+        padding: 32px;
+        width: 100vw;
+      }
+
+      .testimonial-card {
+        width: 100%;
+        margin: 20px 0;
+      }
+
+      .about-sec {
+        padding: 32px;
+        padding-bottom: 64px;
+      }
+
+      .about-container {
+        width: 100vw;
+        flex-direction: column;
+        padding: 0;
+      }
+
+      .about-container .left-content {
+        margin-right: 0;
+        margin-bottom: 64px;
+        padding: 0;
+      }
+
+      .about-container .absolute-image, .about-container .about-image {
+        max-width: 80%;
+      }
+
+      .about-container p {
+        margin-bottom: 32px;
+      }
 
 }
